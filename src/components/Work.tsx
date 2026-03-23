@@ -5,34 +5,34 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "Nextrek",
+    category: "AI-Powered Travel Planner",
+    tools: "Trip management, AI itineraries, Expense splitting",
+    image: "/images/nextrek.jpg",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
+    title: "ZIDIOConnect",
+    category: "Internship & Job Portal",
+    tools: "Excel data upload, AI charts, dashboards",
     image: "/images/radix.png",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
+    title: "ShadowBlock AI",
+    category: "Content Moderation System",
+    tools: "FastAPI, PyTorch, Kafka, GDPR APIs",
+    image: "/images/Solidx.png",
+  },
+  {
+    title: "AI Stock Trading",
+    category: "Stock Trading Platform",
+    tools: "Stock predictions, portfolio optimization",
     image: "/images/bond.png",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
+    title: "WorkNest",
+    category: "Student Gig Platform",
+    tools: "Wallet + escrow + PIN payments",
     image: "/images/sapphire.png",
-  },
-  {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
   },
 ];
 
@@ -98,7 +98,7 @@ const Work = () => {
             >
               {projects.map((project, index) => (
                 <div className="carousel-slide" key={index}>
-                  <div className="carousel-content">
+                  <div className="carousel-content glass-panel" style={{ padding: '30px' }}>
                     <div className="carousel-info">
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>

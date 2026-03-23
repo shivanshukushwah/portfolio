@@ -12,46 +12,40 @@ const Career = () => {
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
-          <div className="career-info-box">
+          <div className="career-info-box glass-panel" style={{ padding: '20px', marginBottom: '20px' }}>
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>Founder</h4>
+                <h5>AquaPure (Startup Initiative)</h5>
               </div>
-              <h3>2020</h3>
+              <h3>2025-Present</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Eco-friendly brand building, product design & marketing initiatives.
             </p>
           </div>
-          <div className="career-info-box">
+          <div className="career-info-box glass-panel" style={{ padding: '20px', marginBottom: '20px' }}>
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Full-Stack Intern</h4>
+                <h5>Zidio, Ceeras IT Services, CodeAlpha</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Built REST APIs, improved response time, fixed vulnerabilities, and implemented ML pipelines.
             </p>
           </div>
-          <div className="career-info-box">
+          <div className="career-info-box glass-panel" style={{ padding: '20px', marginBottom: '20px' }}>
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>Founder - Startup Initiatives</h4>
+                <h5>ShadowBlock AI, WorkNest</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2025-Present</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Building ShadowBlock AI (AI moderation) and WorkNest (student gig platform). Hands-on with AI integration.
             </p>
           </div>
         </div>

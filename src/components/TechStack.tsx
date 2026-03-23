@@ -7,7 +7,6 @@ import {
   BallCollider,
   Physics,
   RigidBody,
-  CylinderCollider,
   RapierRigidBody,
 } from "@react-three/rapier";
 
@@ -15,16 +14,31 @@ const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
   "/images/react2.webp",
   "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
+  "/images/tailwind.svg",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/java.svg",
+  "/images/python.svg",
+  "/images/spring.svg",
+  "/images/fastapi.svg",
+  "/images/mysql.webp",
+  "/images/postgresql.svg",
+  "/images/mongo.webp",
+  "/images/pytorch.svg",
+  "/images/aws.svg",
+  "/images/docker.svg",
+  "/images/node2.webp",
+  "/images/express.webp",
+  "/images/git.svg",
+  "/images/github.svg",
+  "/images/postman.svg",
+  "/images/vercel.svg",
+  "/images/scikitlearn.svg",
+  "/images/linux.svg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
-const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
+const crystalGeometry = new THREE.IcosahedronGeometry(1.4, 0); // Futuristic crystal shape
 
 const spheres = [...Array(30)].map(() => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
@@ -73,17 +87,12 @@ function SphereGeo({
       ref={api}
       colliders={false}
     >
-      <BallCollider args={[scale]} />
-      <CylinderCollider
-        rotation={[Math.PI / 2, 0, 0]}
-        position={[0, 0, 1.2 * scale]}
-        args={[0.15 * scale, 0.275 * scale]}
-      />
+      <BallCollider args={[scale * 1.2]} />
       <mesh
         castShadow
         receiveShadow
         scale={scale}
-        geometry={sphereGeometry}
+        geometry={crystalGeometry}
         material={material}
         rotation={[0.3, 1, 1]}
       />
@@ -156,12 +165,13 @@ const TechStack = () => {
       (texture) =>
         new THREE.MeshPhysicalMaterial({
           map: texture,
-          emissive: "#ffffff",
+          emissive: new THREE.Color().setHSL(Math.random(), 0.8, 0.4), // Random neon emissive colors
           emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
+          emissiveIntensity: 1.2,
+          metalness: 0.9,
+          roughness: 0.1, // Very shiny
+          clearcoat: 1,
+          wireframe: false, // Solid shapes so they don't look like empty boxes
         })
     );
   }, []);
@@ -177,16 +187,17 @@ const TechStack = () => {
         onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
         className="tech-canvas"
       >
-        <ambientLight intensity={1} />
+        <ambientLight intensity={0.4} />
         <spotLight
           position={[20, 20, 25]}
           penumbra={1}
           angle={0.2}
-          color="white"
+          color="#ff00ff"
+          intensity={3}
           castShadow
           shadow-mapSize={[512, 512]}
         />
-        <directionalLight position={[0, 5, -4]} intensity={2} />
+        <directionalLight position={[-10, 5, -4]} intensity={4} color="#00ffff" />
         <Physics gravity={[0, 0, 0]}>
           <Pointer isActive={isActive} />
           {spheres.map((props, i) => (
@@ -204,7 +215,7 @@ const TechStack = () => {
           environmentRotation={[0, 4, 2]}
         />
         <EffectComposer enableNormalPass={false}>
-          <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
+          <N8AO color="#ff0055" aoRadius={3} intensity={2} />
         </EffectComposer>
       </Canvas>
     </div>

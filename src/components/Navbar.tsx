@@ -41,16 +41,16 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div className="header">
+      <div className="header glass-panel" style={{ borderRadius: '50px', marginTop: '20px', padding: '15px 40px' }}>
         <a href="/#" className="navbar-title" data-cursor="disable">
-          RC
+          SK
         </a>
         <a
-          href="mailto:rajeshchittyal21@gmail.com"
+          href="mailto:kushwahashivanshu350@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          rajeshchittyal21@gmail.com
+          kushwahashivanshu350@gmail.com
         </a>
         <ul>
           <li>

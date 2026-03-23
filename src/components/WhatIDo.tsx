@@ -59,7 +59,7 @@ const WhatIDo = () => {
             </svg>
           </div>
           <div
-            className="what-content what-noTouch"
+            className="what-content what-noTouch glass-panel"
             ref={(el) => setRef(el, 0)}
           >
             <div className="what-border1">
@@ -95,20 +95,19 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
+                <div className="what-tags">React</div>
                 <div className="what-tags">Next.js</div>
-                <div className="what-tags">TypeScript</div>
+                <div className="what-tags">Tailwind CSS</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Material UI</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
+                <div className="what-tags">TypeScript</div>
+                <div className="what-tags">Vercel</div>
+                <div className="what-tags">Git/GitHub</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
           <div
-            className="what-content what-noTouch"
+            className="what-content what-noTouch glass-panel"
             ref={(el) => setRef(el, 1)}
           >
             <div className="what-border1">
@@ -134,14 +133,19 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">Java</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">Microservices</div>
                 <div className="what-tags">Python</div>
+                <div className="what-tags">Spring Boot</div>
+                <div className="what-tags">Express.js</div>
+                <div className="what-tags">FastAPI</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">MongoDB</div>
+                <div className="what-tags">PyTorch (AI/ML)</div>
+                <div className="what-tags">API Security (JWT/2FA)</div>
+                <div className="what-tags">AWS</div>
+                <div className="what-tags">Docker</div>
               </div>
               <div className="what-arrow"></div>
             </div>
